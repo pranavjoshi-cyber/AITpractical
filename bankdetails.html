@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="bankApp">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="bankController">
+    <table>
+        <thead>
+            <tr>
+                <th>Bank Name</th>
+                <th>MICR Code</th>
+                <th>IFC Code</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="bank in banks">
+                <td>{{bank.name}}</td>
+                <td>{{bank.micrCode}}</td>
+                <td>{{bank.ifcCode}}</td>
+                <td>{{bank.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        angular.module('bankApp', [])
+            .controller('bankController', function ($scope) {
+                $scope.banks = [
+                    {
+                        name: 'Bank of Example',
+                        micrCode: '123456789',
+                        ifcCode: 'ABCD123456',
+                        address: '123 Main Street, City, Country'
+                    },
+                    {
+                        name: 'Another Bank',
+                        micrCode: '987654321',
+                        ifcCode: 'EFGH987654',
+                        address: '456 Elm Street, City, Country'
+                    },
+                    // Add more bank objects as needed
+                ];
+            });
+    </script>
+</body>
+
+</html>
