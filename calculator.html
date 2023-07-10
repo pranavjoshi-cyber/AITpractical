@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Calculator</title>
+</head>
+<body>
+    <h2>PHP Calculator</h2>
+
+    <form method="post" action="calculator.php">
+        <input type="number" name="num1" placeholder="Enter first number" required><br><br>
+        <input type="number" name="num2" placeholder="Enter second number" required><br><br>
+        <select name="operator" required>
+            <option value="">Select an operation</option>
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+        </select><br><br>
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+</html>
